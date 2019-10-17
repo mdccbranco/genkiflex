@@ -1,5 +1,87 @@
+@import 'sass/variables';
+@import 'sass/mixins';
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #C4C4C4;
+}
+
+.data {
+  height: 60vh;
+  position: relative;
+
+  &-container {
+    position: absolute;
+    width: 80%;
+    height: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      height: 100%;
+      justify-content: space-between;
+
+      &--circle {
+        background-color: #C4C4C4;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+      }
+
+      &--text {
+        width: 25rem;
+        font-size: 3rem;
+        text-align: center;
+      }
+    }
+  }
+
+
+}
+
+.footer {
+  height: 8rem;
+  background-color: #C4C4C4;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--img {
+      width: 3rem;
+
+      &-facebook {
+        width: 2rem;
+        @include responsive(desktop) {
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
