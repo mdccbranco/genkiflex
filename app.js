@@ -52,7 +52,7 @@ app.use(cookieParser());
 app.use(
   session({
     secret: 'ironhack',
-    cookie: {maxAge: 1200000},
+    cookie: {maxAge: 10000},
     resave: true,
     saveUninitialized: true
   })
@@ -81,6 +81,10 @@ passport.deserializeUser((id, cb) => {
 
 app.use(flash());
 
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 passport.use(
   new LocalStrategy((username, password, next) => {
     User.findOne({username}, (err, user) => {
@@ -98,8 +102,6 @@ passport.use(
   })
 );
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 const index = require('./routes/index');
 const authRouter = require('./routes/authRouter');
