@@ -11,7 +11,7 @@ const session = require('express-session');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-// const User = require('./models/user');
+const User = require('./models/user');
 const flash = require('connect-flash');
 
 mongoose
@@ -46,7 +46,7 @@ app.use(cookieParser());
 
 app.use(
   session({
-    secret: 'woman',
+    secret: 'ironhack',
     cookie: {maxAge: 1200000},
     resave: true,
     saveUninitialized: true
@@ -97,9 +97,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const index = require('./routes/index');
+const authRouter = require('./routes/authRouter');
+const admRouter = require('./routes/admRouter');
 
 
 app.use('/', index);
+app.use('/', authRouter);
+app.use('/', admRouter);
 
 
 module.exports = app;
