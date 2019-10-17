@@ -35,6 +35,11 @@ const debug = require('debug')(
 const app = express();
 
 // Middleware Setup
+app.use(require('node-sass-middleware')({
+  src: path.join(__dirname, 'public'),
+  dest: path.join(__dirname, 'public'),
+  sourceMap: true
+ }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(
