@@ -61,12 +61,8 @@ authRoutes.post('/signup', (req, res, next) => {
     })
 });
 
-
-authRoutes.get('/login', (req, res, next) => {
-  res.render('login', {
-    message: 'error',
-    user: req.user
-  });
+authRoutes.get("/login", (req, res, next) => {
+  res.render("login");
 });
 
 authRoutes.post('/login',
