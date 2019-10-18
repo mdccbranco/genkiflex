@@ -1,5 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import 'sass/abstracts/variables';
+@import 'sass/abstracts/mixins';
+@import 'sass/abstracts/base';
+@import 'sass/abstracts/keyframes';
 
+@import 'sass/layout/header';
+@import 'sass/layout/data';
+@import 'sass/layout/admin';
+@import 'sass/layout/footer';
+
+
+@import 'sass/components/coloredLine';

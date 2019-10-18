@@ -1,0 +1,144 @@
+.header {
+  height: $header-height;
+  position: relative;
+  background-image: url('/images/saladBg.png');
+  // background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  // z-index: -3;
+
+  &__mask {
+    &--green {
+      position: absolute;
+      height: $header-height;
+      width: 100%;
+      background-color: rgba(49, 115, 1, .05);
+    }
+
+    &--black {
+      position: absolute;
+      height: $header-height;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+    display: flex;
+    align-items: baseline;
+
+    &--main {
+      font-weight: 900;
+      font-size: 6rem;
+      line-height: 7rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: $color-white;
+    }
+
+    &--sub {
+      margin-left: .5rem;
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 2.8rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: $color-white;
+    }
+  }
+
+  &__container {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 71rem;
+    height: 33rem;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 2.6rem;
+    @include abs-center(55vh);
+    overflow: hidden;
+
+    &--catch {
+      padding-top: 4.5rem;
+      font-size: 2.8rem;
+      line-height: 175%;
+      color: $color-white;
+      text-align: center;
+
+      &-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &-form {
+      display: flex;
+
+      &-block {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        left: 72rem;
+        // transform: translateX(-61.5rem);
+      }
+      
+      &--input {
+        width: 45rem;
+        padding: 3rem 2.5rem 2.5rem 2.5rem;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        margin-right: 11rem;
+
+        &::placeholder {
+          font-size: 2rem;
+        }
+      }
+
+      &--next {
+        @extend .header__container-btn;
+        margin: 0 11rem;
+        position: absolute;
+        top: 10rem;
+      }
+
+      &--submit {
+        @extend .header__container-btn;
+        position: absolute;
+        top: 10rem;
+        right: 22rem;
+      }
+    }
+
+    &-btn {
+      width: 28rem;
+      padding: 3.5rem 0;
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 2rem;
+      border: none;
+      outline: none;
+      margin-bottom: 5rem;
+      background-color: $color-dark-orange;
+      color: $color-white;
+      transition: all .3s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.03) translateY(-4px);
+      }
+
+      &:active {
+        transform: scale(1.03) translateY(-2px);
+      }
+    }
+  }
+}
