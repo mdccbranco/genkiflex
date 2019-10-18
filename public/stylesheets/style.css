@@ -109,7 +109,7 @@ a {
       .header__container {
         width: 32rem;
         height: 24rem;
-        top: 73vh; } }
+        top: 65vh; } }
     .header__container--catch {
       padding-top: 4.5rem;
       font-size: 2.8rem;
@@ -145,16 +145,12 @@ a {
         border-radius: 1rem;
         border: none;
         outline: none;
-        margin-right: 11rem; 
-}
+        margin-right: 11rem;
+        font-size: 2rem; }
         @media (max-width: 576px) {
           .header__container-form--input {
             width: 20rem;
-            margin-right: 5rem; } 
-}
-
-        margin-right: 11rem;
-        font-size: 2rem; }
+            margin-right: 5rem; } }
         .header__container-form--input::placeholder {
           font-size: 2rem; }
           @media (max-width: 576px) {
