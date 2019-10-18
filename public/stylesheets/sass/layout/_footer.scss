@@ -3,18 +3,30 @@
   background-color: $color-dark-green;
   display: flex;
   justify-content: center;
+  @include responsive(mobile) {
+    height: 4rem;
+  }
 
   &__container {
     width: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include responsive(mobile) {
+      width: 35%;
+    }  
 
     &--img {
       width: 2.5rem;
+      @include responsive(mobile) {
+        width: 2rem;
+      }
 
       &-facebook {
         width: 1.4rem;
+        @include responsive(mobile) {
+          width: 1rem;
+        }
       }
     }
   }
