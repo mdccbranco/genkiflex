@@ -1,0 +1,21 @@
+.footer {
+  height: 6rem;
+  background-color: $color-dark-green;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--img {
+      width: 2.5rem;
+
+      &-facebook {
+        width: 1.4rem;
+      }
+    }
+  }
+}

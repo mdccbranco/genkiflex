@@ -1,0 +1,30 @@
+.colored-line {
+  display: flex;
+  width: $colored-line-width;
+  height: $colored-line-height;
+
+  &--1 {
+    background-color: $color-dark-green;
+    width: 37.5%;
+  }
+
+  &--2 {
+    background-color: $color-light-green;
+    width: 37.5%;
+  }
+
+  &--3 {
+    background-color: $color-yellow;
+    flex-grow: 1;
+  }
+
+  &--4 {
+    background-color: $color-light-orange;
+    flex-grow: 1;
+  }
+
+  &--5 {
+    background-color: $color-dark-orange;
+    flex-grow: 1;
+  }
+}

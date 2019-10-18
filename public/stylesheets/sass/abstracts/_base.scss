@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Roboto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fadeOut {
+  animation: fadeOut 2s linear forwards;
+}
+
+.translateLeft {
+  animation: translateLeft 1.5s ease forwards;
+}
