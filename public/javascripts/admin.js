@@ -9,12 +9,12 @@ const openPage = (pageName, elmnt, bgcolor, color) => {
   }
   tablinks = document.getElementsByClassName('tablink');
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = '';
-    tablinks[i].style.color = 'red';
+    tablinks[i].style.backgroundColor = '#F29F05';
+    tablinks[i].style.color = '#fff';
   }
   document.getElementById(pageName).style.display = 'block';
-  elmnt.style.backgroundColor = bgcolor;
-  elmnt.style.color = color;
+  elmnt.style.backgroundColor = '#F27405';
+  elmnt.style.color = '#fff';
 }
 
 // Get the element with id='defaultOpen' and click on it
