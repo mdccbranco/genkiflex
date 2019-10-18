@@ -6,26 +6,40 @@
   @include responsive(mobile) {
     height: 4rem;
   }
+  @include responsive(bigDesktop) {
+    height: 7rem;
+  }
 
   &__container {
     width: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @include responsive(mobile) {
       width: 35%;
-    }  
+    }
+    
+    @include responsive(bigDesktop) {
+      width: 25%;
+    }
 
     &--img {
       width: 2.5rem;
       @include responsive(mobile) {
         width: 2rem;
       }
+      @include responsive(bigDesktop) {
+        width: 3.5rem;
+      }
 
       &-facebook {
         width: 1.4rem;
         @include responsive(mobile) {
           width: 1rem;
+        }
+        @include responsive(bigDesktop) {
+          width: 1.8rem;
         }
       }
     }

@@ -9,6 +9,10 @@ let coloredLinesEdit = document.querySelectorAll('.colored-line--header-containe
 
 let translateWidth = (window.innerWidth > 1000) ? '610px' : '300px';
 
+if (window.innerWidth > 1400) {
+  translateWidth = '610px';
+}
+
 console.log(coloredLinesEdit);
 
 let clicksBtn = 0;

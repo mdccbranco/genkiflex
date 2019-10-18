@@ -65,6 +65,11 @@
       top: 65vh;
     }
 
+    @include responsive(bigDesktop) {
+      width: 74rem;
+      height: 38rem;
+    }
+
     &--catch {
       padding-top: 4.5rem;
       font-size: 2.8rem;
@@ -76,6 +81,10 @@
         font-size: 2.3rem;
         padding-top: 4rem;
         line-height: 150%;
+      }
+      @include responsive(bigDesktop) {
+        font-size: 3.5rem;
+        padding-top: 5rem;
       }
 
       &-block {
@@ -102,6 +111,9 @@
           left: 34rem;
           top: 5rem;
         }
+        @include responsive(bigDesktop) {
+          left: 80rem;
+        }
       }
       
       &--input {
@@ -116,6 +128,11 @@
         @include responsive(mobile) {
           width: 20rem;
           margin-right: 5rem;
+        }
+
+        @include responsive(bigDesktop) {
+          margin-right: 16rem;
+          // width: 50rem;
         }
 
         &::placeholder {
@@ -147,6 +164,10 @@
           width: 25rem;
           margin-right: 5rem;
         }
+        @include responsive(bigDesktop) {
+          margin-right: 14rem;
+          width: 53rem;
+        }
       }
 
       &--next {
@@ -158,6 +179,10 @@
         @include responsive(mobile) {
           margin: 0;
         }
+
+        @include responsive(bigDesktop) {
+          margin-top: 5rem;
+        }
       }
 
       &--submit {
@@ -168,6 +193,10 @@
 
         @include responsive(mobile) {
           right: 5rem;
+        }
+        @include responsive(bigDesktop) {
+          margin-top: 5rem;
+          right: 26rem;
         }
       }
     }
