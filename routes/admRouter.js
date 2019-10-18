@@ -20,10 +20,13 @@ function checkRoles(role) {
 //   } 
 // });
 
-admRouter.get('/admin', checkRoles('adm'), (req, res, next) => {
+// admRouter.get('/admin', checkRoles('adm'), (req, res, next) => {
+//   res.render('admin')
+// });
+
+admRouter.get('/admin', (req, res, next) => {
   res.render('admin')
 });
-
 
 admRouter.get('/logout', (req, res) => {
   req.logout();
