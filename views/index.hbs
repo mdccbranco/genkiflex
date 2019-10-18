@@ -1,45 +1,73 @@
+<div class="colored-line">
+  <div class="colored-line--1"></div>
+  <div class="colored-line--2"></div>
+  <div class="colored-line--3"></div>
+  <div class="colored-line--4"></div>
+  <div class="colored-line--5"></div>
+</div>
 
-<header>
-    <div class="allDiv">
-        <div class="allDiv-content">
-            <h1>GenkiFoods</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repellendus quod natus neque blanditiis sed minus ipsa, id odio laboriosam architecto laudantium maiores atque, iure unde non culpa esse quam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate iusto exercitationem, nam corporis repudiandae quia blanditiis, delectus earum porro laudantium numquam excepturi odit enim ipsa atque explicabo modi, tenetur dolorem?</p>
-        </div>
-        <div class="allDiv-allForm">
-            <form action="#">
-            <input type="text" name="firstname" value="" placeholder="Nome:">
-            <input type="text" name="firstname" value="" placeholder="Email:">
-            <input type="text" name="firstname" value="" placeholder="Telefone:">
-            <select name="Bairro" id="#">
-            <option value="bairro">Bairro</option>
-            </select>
-            <select name="preferencia" id="#">
-            <option value="preferencia">Preferências</option>
-            </select>
-            <button>CADASTRE-SE</button>
-            </form>
-        </div>
+<header class="header">
+  <div class="header__mask--green"></div>
+  <div class="header__mask--black"></div>
+
+  <div class="header__logo-box">
+    <h1 class="header__logo-box--main">GENKI</h1>
+    <h2 class="header__logo-box--sub">.FLEX</h3>
+  </div>
+
+  <div class="header__container">
+    <div class="header__container--catch-block">
+      <h3 class="header__container--catch">
+        Cardápios flexíveis <br> para uma alimentação com menor carne.
+      </h3>
+
+      <button class="header__container-btn">QUERO SER GENKI</button>
     </div>
+
+    <div class="header__container-form-block">
+      <form action="/" method="POST" class="header__container-form">
+        <input type="text" name="nome" class="header__container-form--input" placeholder="Nome:">
+        <input type="text" name="email" class="header__container-form--input" placeholder="Email:">
+        <input type="text" name="meat" class="header__container-form--input"
+          placeholder="Come carne quantas vezes na semana?">
+        <input type="text" name="bairro" class="header__container-form--input" placeholder="Bairro:">
+        <input type="text" name="phone" class="header__container-form--input" placeholder="Telefone:">
+        <button class="header__container-form--submit" type="submit">Finalizar</button>
+      </form>
+      <button class="header__container-form--next" type="button">Continue</button>
+    </div>
+
+  </div>
+
 </header>
 
 
 <div class="data">
   <div class="data-container">
 
-    <div class="data-container__card">
-      <div class="data-container__card--circle"></div>
-      <p class="data-container__card--text">"Lorem ipsum dolor sit amet consectetur adipiscing elit"</p>
-    </div>
-    <div class="data-container__card">
-      <div class="data-container__card--circle"></div>
-      <p class="data-container__card--text">"Lorem ipsum dolor sit amet consectetur adipiscing elit"</p>
-    </div>
-    <div class="data-container__card">
-      <div class="data-container__card--circle"></div>
-      <p class="data-container__card--text">"Lorem ipsum dolor sit amet consectetur adipiscing elit"</p>
+    <div class="data-container__images">
+      <figure class="data-container__images-container">
+        <img class="data-container__images-container--img" src="images/dieta.svg" alt="Pote de saladas">
+      </figure>
+      <figure class="data-container__images-container">
+        <img class="data-container__images-container--img" src="images/geladeira.svg" alt="Geladeira">
+      </figure>
+      <figure class="data-container__images-container">
+        <img class="data-container__images-container--img" src="images/caminhao.svg" alt="Caminhão">
+      </figure>
     </div>
 
-
+    <div class="data-container__sentences">
+      <p class="data-container__sentences--text">
+        Dietas semanais <br> personalizadas com todos <br> os nutrientes que você precisa
+      </p>
+      <p class="data-container__sentences--text">
+        Pratos ultra congelados para <br> garantir todos os nutrientes da <br> sua refeição
+      </p>
+      <p class="data-container__sentences--text">
+        Entregas programadas para <br> você que tem uma agenda <br> apertada
+      </p>
+    </div>
   </div>
 </div>
 
@@ -57,3 +85,5 @@
   </div>
 
 </footer>
+
+<script src="javascripts/homepage.js"></script>
