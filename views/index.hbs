@@ -28,9 +28,27 @@
       <form action="/" method="POST" class="header__container-form">
         <input type="text" name="nome" class="header__container-form--input" placeholder="Nome:">
         <input type="text" name="email" class="header__container-form--input" placeholder="Email:">
-        <input type="text" name="meat" class="header__container-form--input"
-          placeholder="Come carne quantas vezes na semana?">
-        <input type="text" name="bairro" class="header__container-form--input" placeholder="Bairro:">
+        {{!-- <input type="text" name="meat" class="header__container-form--input break"
+          placeholder="Quantidade de carne por semana"> --}}
+        <select class="header__container-form--select">
+          <option value="quantidade-de-carne" selected>Consumo de carne desejado</option>    
+          <option value="nenhum-dia">Nenhum</option>
+          <option value="1-vez-semana">1 vez por semana</option>
+          <option value="2-vezes-semana">2 vezes por semana</option>
+          <option value="3-vezes-semana">3 vezes por semana</option>
+          <option value="4-vezes-semana">4 vezes por semana</option>
+          <option value="5-vezes-semana">5 vezes por semana</option>
+          <option value="6-vezes-semana">6 vezes por semana</option>
+          <option value="todos-os-dias">Todos os dias na semana</option>
+        </select>
+        <select class="header__container-form--select">
+          <option value="bairro" selected>Bairro</option>    
+          <option value="consolacao">Consolação</option>
+          <option value="jardim paulista">Jardim Paulista</option>
+          <option value="moema">Moema</option>
+          <option value="vila mariana">Vila Mariana</option>
+          <option value="outros">Outros</option>
+        </select>
         <input type="text" name="phone" class="header__container-form--input" placeholder="Telefone:">
         <button class="header__container-form--submit" type="submit">Finalizar</button>
       </form>
@@ -47,27 +65,34 @@
 
     <div class="data-container__images">
       <figure class="data-container__images-container">
-        <img class="data-container__images-container--img" src="images/dieta.svg" alt="Pote de saladas">
+        <img class="data-container__images-container--img-salad" src="images/dieta.svg" alt="Pote de saladas">
       </figure>
-      <figure class="data-container__images-container">
-        <img class="data-container__images-container--img" src="images/geladeira.svg" alt="Geladeira">
-      </figure>
-      <figure class="data-container__images-container">
-        <img class="data-container__images-container--img" src="images/caminhao.svg" alt="Caminhão">
-      </figure>
-    </div>
-
-    <div class="data-container__sentences">
       <p class="data-container__sentences--text">
         Dietas semanais <br> personalizadas com todos <br> os nutrientes que você precisa
       </p>
+    </div>
+    <div class="data-container__images">
+      <figure class="data-container__images-container">
+        <img class="data-container__images-container--img-refrigerator" src="images/geladeira.svg" alt="Geladeira">
+      </figure>
       <p class="data-container__sentences--text">
         Pratos ultra congelados para <br> garantir todos os nutrientes da <br> sua refeição
       </p>
+    </div>
+    <div class="data-container__images">
+      <figure class="data-container__images-container">
+        <img class="data-container__images-container--img-truck" src="images/caminhao.svg" alt="Caminhão">
+      </figure>
       <p class="data-container__sentences--text">
         Entregas programadas para <br> você que tem uma agenda <br> apertada
       </p>
     </div>
+
+    {{!-- <div class="data-container__sentences">
+      
+      
+      
+    </div> --}}
   </div>
 </div>
 
