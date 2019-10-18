@@ -33,6 +33,13 @@ a {
   visibility: hidden;
 }
 
+.hr-like {
+  height: 2px;
+  width: 90%;
+  background-image: linear-gradient(to right, $color-light-grey, rgba(130, 130, 130, 0.3), rgba(130, 130, 130, 0.3), rgba(100, 100, 100, 0.3), rgba(130, 130, 130, 0.3), rgba(130, 130, 130, 0.3), $color-light-grey);
+  margin: 0 auto;
+}
+
 .fadeIn {
   animation: fadeIn .5s linear both;
 }
