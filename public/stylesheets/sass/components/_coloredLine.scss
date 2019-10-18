@@ -45,4 +45,54 @@
     background-color: $color-dark-orange;
     flex-grow: 1;
   }
+
+  &--header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    display: flex;
+
+    &--1 {
+      background-color: $color-dark-green;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  
+    &--2 {
+      background-color: $color-light-green;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  
+    &--3 {
+      background-color: $color-yellow;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  
+    &--4 {
+      background-color: $color-light-orange;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  
+    &--5 {
+      background-color: $color-dark-orange;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s;
+    }
+
+  }
 }

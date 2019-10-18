@@ -29,6 +29,14 @@ a {
   visibility: hidden;
 }
 
+.fadeIn {
+  animation: fadeIn .5s linear both;
+}
+
+.expandRight {
+  animation: expandRight .5s linear both;
+}
+
 .fadeOut {
   animation: fadeOut 2s linear forwards;
 }

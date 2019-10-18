@@ -4,10 +4,12 @@ let catchBlock = document.querySelector('.header__container--catch-block');
 let formBlock = document.querySelector('.header__container-form-block');
 let nextBtn = document.querySelector('.header__container-form--next');
 let form = document.querySelector('.header__container-form');
+let submitBtn = document.querySelector('.header__container-form--submit');
+let coloredLinesEdit = document.querySelectorAll('.colored-line--header-container div');
 
 let translateWidth = (window.innerWidth > 1000) ? '610px' : '300px';
 
-console.log(formBlock);
+console.log(coloredLinesEdit);
 
 let clicksBtn = 0;
 let delayTransition = 1000;
@@ -44,6 +46,12 @@ nextBtn.addEventListener('click', () => {
 });
 
 function translateForm (formField) {
+  for (let i = 0; i < 5; i++) {
+    if (clicksBtn === i) {
+      coloredLinesEdit[i].classList.toggle('fadeIn');
+    }
+  }
+
   let nextField = formField + 1;
   console.log(clicksBtn);
 
@@ -66,6 +74,7 @@ function translateForm (formField) {
       fill: 'forwards'
     });
   } else {
+    submitBtn.disabled = false;
     form.animate([
       { transform: 'translateX(calc(' + (formField - 1) + ' * -' + translateWidth + '))' },
       { transform: 'translateX(calc(' + formField + ' * -' + translateWidth + '))' }
