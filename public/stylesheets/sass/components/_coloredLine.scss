@@ -1,11 +1,12 @@
 .colored-line {
   display: flex;
+  flex-direction: row-reverse;
   width: $colored-line-width;
   height: $colored-line-height;
 
   @include responsive(mobile) {
     position: absolute;
-    flex-direction: column;
+    flex-direction: column-reverse;
     z-index: 100;
     height: 128vh;
     width: .5rem;

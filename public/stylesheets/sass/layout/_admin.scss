@@ -1,54 +1,167 @@
 .admin {
   position: relative;
   height: 100vh;
-  background-color: #fff;
+  overflow: hidden;
 
-  &-container {
-    width: 120rem;
-    height: $data-container-height;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  &__logo-box {
+    @extend .header__logo-box;
 
-    &__header {
-      display: flex;
-      height: $data-header-height;
-
-      &--btns {
-        padding: .5rem 1rem;
-        width: 15rem;
-        font-size: 2.6rem;
-        background-color: rgba(0, 0, 0, .1);
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        text-align: center;
-      }
+    &--main {
+      @extend .header__logo-box--main;
+      color: $color-black;
     }
 
-    &__infos {
-      height: $data-container-height - $data-header-height;
-      width: 100%;
-      background-color: #f0f;
-      border-radius: 10px;
+    &--sub {
+      @extend .header__logo-box--sub;
+      color: $color-black;
+    }
+  }
+
+  &__logout {
+    position: absolute;
+    right: 5rem;
+    top: 6.5rem;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    font-weight: 900;
+    background-color: transparent;
+    border: none;
+    font-family: Roboto;
+    text-decoration: none;
+    color: $color-black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__btns-container {
+    margin: 11.5rem 0 0 5rem;
+
+    @include responsive(bigDesktop) {
+      margin: 13rem 0 0 5rem;
+    }
+
+    &--btn {
+      width: 13rem;
+      background-color: $color-light-orange;
+
+      border-radius: 1.5rem;
+      text-align: center;
+      border: none;
+      padding: 1.4rem 2rem;
+      color: $color-white;
+      font-weight: bold;
+      margin-left: 1rem;
+      transition: all .3s;
+
+      &:hover {
+        transform: translateY(-4px) scale(1.03);
+      }
+
+      &:active {
+        transform: scale(1.03) translateY(-2px);
+      }
     }
   }
 }
 
-.header-btn__active {
-  // Precisa ficar embaixo
-  border-radius: 5px;
-  background-color: #f0f;
-  position: relative;
+.tab-content {
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0 - 1rem;
-    left: 0;
-    height: 1.5rem;
-    background-color: #f0f;
-    width: 15rem;
+  &__prospects {
+    // background-color: $color-light-grey;
+    background-color: $color-light-grey;
+    width: 80%;
+    margin: 8rem auto 0 auto;
+    height: 56rem;
+    border-radius: 2rem;
+    overflow-y: scroll;
+    position: relative;
+
+    @include responsive(bigDesktop) {
+      margin: 6rem auto 0 auto;
+    }
+
+    &-header {
+      margin: 0 auto;
+      padding: 5rem 0 1rem;
+      display: flex;
+      width: 95%;
+      justify-content: space-between;
+
+      &--title {
+        width: 15%;
+        font-size: 1.8rem;
+        font-weight: 900;
+
+        &:nth-of-type(1) {
+          width: 12%;
+        }
+
+        &:nth-of-type(2) {
+          width: 12%;
+        }
+
+        &:nth-of-type(3) {
+          width: 22%;
+        }
+
+        &:nth-of-type(5) {
+          width: 12%;
+        }
+
+        &:last-of-type {
+          width: 25%;
+        }
+      }
+    }
+
+    &-row {
+      width: 95%;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      height: 5rem;
+      border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+
+      &--infos {
+        width: 15%;
+        font-size: 1.2rem;
+
+        @include responsive(bigDesktop) {
+          font-size: 1.6rem;
+        }
+
+        &:nth-of-type(1) {
+          width: 12%;
+          padding-left: 1rem;
+        }
+
+        &:nth-of-type(2) {
+          width: 12%;
+        }
+
+        &:nth-of-type(3) {
+          width: 22%;
+        }
+
+        &:nth-of-type(5) {
+          width: 12%;
+          margin-left: 1rem;
+        }
+
+        &:last-of-type {
+          width: 25%;
+          padding-left: 1rem;
+        }
+      }
+    }
   }
+}
+
+#canvas {
+  width: 90%;
+  height: 80%;
+  @include abs-center();
+  background-color: #fff;
 }

@@ -9,16 +9,15 @@ const openPage = (pageName, elmnt, bgcolor, color) => {
   }
   tablinks = document.getElementsByClassName('tablink');
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = '';
-    tablinks[i].style.color = 'red';
+    tablinks[i].style.backgroundColor = '#F29F05';
   }
   document.getElementById(pageName).style.display = 'block';
-  elmnt.style.backgroundColor = bgcolor;
-  elmnt.style.color = color;
+  elmnt.style.backgroundColor = '#F27405';
 }
 
 // Get the element with id='defaultOpen' and click on it
 document.getElementById('defaultOpen').click();
+
 
 const googleMaps = () => {
   console.log("print map")
@@ -49,8 +48,11 @@ const googleMaps = () => {
     });
   });
 
-
   markers.push(map);
   console.log(markers)
 
 };
+
+let ctx = document.querySelector('#canvas');
+
+

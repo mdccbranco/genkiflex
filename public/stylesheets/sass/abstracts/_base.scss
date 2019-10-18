@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: Roboto;
+
+  @include responsive(bigDesktop) {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -27,6 +31,13 @@ a {
 
 .hidden {
   visibility: hidden;
+}
+
+.hr-like {
+  height: 2px;
+  width: 90%;
+  background-image: linear-gradient(to right, $color-light-grey, rgba(130, 130, 130, 0.3), rgba(130, 130, 130, 0.3), rgba(100, 100, 100, 0.3), rgba(130, 130, 130, 0.3), rgba(130, 130, 130, 0.3), $color-light-grey);
+  margin: 0 auto;
 }
 
 .fadeIn {

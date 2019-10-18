@@ -113,9 +113,14 @@
         margin-right: 11rem;
         font-size: 2rem;
 
+
         @include responsive(mobile) {
           width: 20rem;
           margin-right: 5rem;
+
+        &-bairro {
+          width: 50rem;
+
         }
 
         &::placeholder {
