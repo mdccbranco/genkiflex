@@ -18,8 +18,8 @@
   <div class="admin__btns-container">
     <button class='admin__btns-container--btn tablink' onclick="openPage('prospects', this, 'white', ' black' )"
       id='defaultOpen'>PROSPECTS</button>
-    <button class='admin__btns-container--btn tablink'
-      onclick="openPage('chart', this, 'white', ' black')">GRÁFICOS</button>
+    {{!-- <button class='admin__btns-container--btn tablink'
+      onclick="openPage('chart', this, 'white', ' black')">GRÁFICOS</button> --}}
     <button class='admin__btns-container--btn tablink' onclick="openPage('map', this, 'white', ' black')">MAPAS</button>
   </div>
 
@@ -50,11 +50,11 @@
     </div>
   </div>
 
-  <div id='chart' class='tabcontent'>
+  {{!-- <div id='chart' class='tabcontent'>
     <div class="tab-content__prospects">
       <canvas id="canvas"></canvas>
     </div>
-  </div>
+  </div> --}}
 
   <div class='map' class='tabcontent' onclick="getPlaces">
     <div id="map"> </div>
