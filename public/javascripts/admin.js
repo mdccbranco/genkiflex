@@ -1,17 +1,9 @@
-// let headerBtns = document.querySelectorAll('.admin-container__header--btns');
-
-// headerBtns.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     headerBtns.forEach(btn2 => {
-//       btn2.classList.remove('header-btn__active');
-//     });
-//     btn.classList.add('header-btn__active');
-//   });
-// })
-
 const openPage = (pageName, elmnt, bgcolor, color) => {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName('tabcontent');
+  if (pageName === 'map') {
+    googleMaps();
+  }
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = 'none';
   }
@@ -28,42 +20,37 @@ const openPage = (pageName, elmnt, bgcolor, color) => {
 // Get the element with id='defaultOpen' and click on it
 document.getElementById('defaultOpen').click();
 
+const googleMaps = () => {
+  console.log("print map")
+  const stores = [{
+    lat: -23.5742546,
+    lng: -46.677624
+  }, {
+    lat: -23.553994,
+    lng: -46.6600004
+  },{
+    lat: -23.6020718,
+    lng: -46.6742054
+  },{
+    lat: -23.5498462,
+    lng: -46.7088672
+  }];
+  var myLatlng = new google.maps.LatLng(-23.5742546, -46.677624);
 
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   console.log('IronGenerator JS imported successfully!');
-
-// }, false);
-
-// window.onload = () => {
-//   getPlaces();
-// };
-
-
-function placeOnTheMap(place) {
-  const markers = [];
-  let center = {
-    lat: 41.386230,
-    lng: 2.174980
-  };
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
-    center: center
+    center: myLatlng,
+  });
+  let markers = stores.map((location, i) => {
+    return new google.maps.Marker({
+      position: location,
+      map: map,
+      label: "GF"
+    });
   });
 
-  // let center = {
-  //   lat: 41.386230,
-  //   lng: 2.174980
-  // };
-}
 
-const getPlaces = () => {
-  axios.get("/api")
-    .then(response => {
-      placeOnTheMap(response.data);
-      console.log(response)
-    })
-    .catch(error => {
-      console.log(error);
-    })
-}
+  markers.push(map);
+  console.log(markers)
+
+};
