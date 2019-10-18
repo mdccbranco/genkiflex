@@ -2,11 +2,9 @@
   height: $header-height;
   position: relative;
   background-image: url('/images/saladBg.png');
-  // background-size: contain;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  // z-index: -3;
 
   &__mask {
     &--green {
@@ -113,6 +111,7 @@
         border: none;
         outline: none;
         margin-right: 11rem;
+        font-size: 2rem;
 
         @include responsive(mobile) {
           width: 20rem;

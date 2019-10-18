@@ -4,12 +4,10 @@ let catchBlock = document.querySelector('.header__container--catch-block');
 let formBlock = document.querySelector('.header__container-form-block');
 let nextBtn = document.querySelector('.header__container-form--next');
 let form = document.querySelector('.header__container-form');
-let submitBtn = document.querySelector('.header__container-form--submit');
-let coloredLinesEdit = document.querySelectorAll('.colored-line--header-container div');
 
 let translateWidth = (window.innerWidth > 1000) ? '610px' : '300px';
 
-console.log(coloredLinesEdit);
+console.log(formBlock);
 
 let clicksBtn = 0;
 let delayTransition = 1000;
@@ -24,7 +22,7 @@ startBtn.addEventListener('click', () => {
     }, 1000);
   }
 
-  if (clicksBtn < 6) {
+  if (clicksBtn < 2) {
     translateForm(clicksBtn);
   }
   clicksBtn += 1;
@@ -39,19 +37,13 @@ nextBtn.addEventListener('click', () => {
     }, 1000);
   }
 
-  if (clicksBtn < 6) {
+  if (clicksBtn < 2) {
     translateForm(clicksBtn);
   }
   clicksBtn += 1;
 });
 
 function translateForm (formField) {
-  for (let i = 0; i < 5; i++) {
-    if (clicksBtn === i) {
-      coloredLinesEdit[i].classList.toggle('fadeIn');
-    }
-  }
-
   let nextField = formField + 1;
   console.log(clicksBtn);
 
@@ -64,7 +56,7 @@ function translateForm (formField) {
       easing: 'ease-in-out',
       fill: 'forwards'
     });
-  } else if (clicksBtn < 4) {
+  } else if (clicksBtn < 1) {
     form.animate([
       { transform: 'translateX(calc(' + (formField - 1) + ' * -' + translateWidth + '))' },
       { transform: 'translateX(calc(' + formField + ' * -' + translateWidth + '))' }
@@ -74,7 +66,6 @@ function translateForm (formField) {
       fill: 'forwards'
     });
   } else {
-    submitBtn.disabled = false;
     form.animate([
       { transform: 'translateX(calc(' + (formField - 1) + ' * -' + translateWidth + '))' },
       { transform: 'translateX(calc(' + formField + ' * -' + translateWidth + '))' }

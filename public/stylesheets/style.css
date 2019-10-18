@@ -26,6 +26,12 @@ a {
 .hidden {
   visibility: hidden; }
 
+.fadeIn {
+  animation: fadeIn .5s linear both; }
+
+.expandRight {
+  animation: expandRight .5s linear both; }
+
 .fadeOut {
   animation: fadeOut 2s linear forwards; }
 
@@ -139,11 +145,16 @@ a {
         border-radius: 1rem;
         border: none;
         outline: none;
-        margin-right: 11rem; }
+        margin-right: 11rem; 
+}
         @media (max-width: 576px) {
           .header__container-form--input {
             width: 20rem;
-            margin-right: 5rem; } }
+            margin-right: 5rem; } 
+}
+
+        margin-right: 11rem;
+        font-size: 2rem; }
         .header__container-form--input::placeholder {
           font-size: 2rem; }
           @media (max-width: 576px) {
@@ -362,5 +373,46 @@ a {
   .colored-line--5 {
     background-color: #F27405;
     flex-grow: 1; }
+  .colored-line--header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    display: flex; }
+    .colored-line--header-container--1 {
+      background-color: #317302;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s; }
+    .colored-line--header-container--2 {
+      background-color: #679546;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s; }
+    .colored-line--header-container--3 {
+      background-color: #F2B705;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s; }
+    .colored-line--header-container--4 {
+      background-color: #F29F05;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s; }
+    .colored-line--header-container--5 {
+      background-color: #F27405;
+      width: 20%;
+      height: 100%;
+      opacity: 0;
+      transition: all .3s; }
+
+.map {
+  width: 100%;
+  height: 600px; }
 
 /*# sourceMappingURL=style.css.map */

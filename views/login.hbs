@@ -1,20 +1,40 @@
-<div class="">
-  <div class="">
-
-    <h4 class="">LOGIN</h4>
-    <form action="login" method="POST">
-      <div>
-        <label for="username">Username:</label>
-        <input data="commit" type="text" name="username">
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input data="commit" type="password" name="password">
-      </div>
-      <div>
-        <button class="btn-auth" type="submit">Login</button>
-      </div>
-    </form>
-    <br>
-  </div>
+<div class="colored-line">
+  <div class="colored-line--1"></div>
+  <div class="colored-line--2"></div>
+  <div class="colored-line--3"></div>
+  <div class="colored-line--4"></div>
+  <div class="colored-line--5"></div>
 </div>
+
+<header class="header">
+  <div class="header__mask--green"></div>
+  <div class="header__mask--black"></div>
+
+  <div class="header__logo-box">
+    <h1 class="header__logo-box--main">GENKI</h1>
+    <h2 class="header__logo-box--sub">.DASHBOARD</h3>
+  </div>
+
+  <div class="header__container">
+    <div class="header__container--catch-block">
+      <h3 class="header__container--catch">
+        Plataforma digital <br> para acompanhamento de leads.
+      </h3>
+
+      <button class="header__container-btn">LOGIN</button>
+    </div>
+
+    <div class="header__container-form-block">
+      <form action="/login" method="POST" class="header__container-form">
+        <input type="text" name="username" class="header__container-form--input" placeholder="Username:">
+        <input type="password" name="password" class="header__container-form--input" placeholder="Password:">
+        <button class="header__container-form--submit" type="submit">LOGIN</button>
+      </form>
+      <button class="header__container-form--next" type="button">Continue</button>
+    </div>
+
+  </div>
+
+</header>
+
+<script src="javascripts/login.js"></script>
