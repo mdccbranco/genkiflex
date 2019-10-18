@@ -15,21 +15,11 @@ function checkRoles(role) {
   };
 }
 
-// admRouter.get('/admin', ensureLogin.ensureLoggedIn('/'), (req, res) => {
-//   if (req.user.role !== 'adm') {
-//     res.render('/admin', {user: req.user, isAdm: true});
-//   } 
-// });
-
-// admRouter.get('/admin', checkRoles('adm'), (req, res, next) => {
-//   res.render('admin')
-// });
-
-admRouter.get('/admin', (req, res, next) => {
+admRouter.get('/admin', checkRoles('adm'), (req, res, next) => {
+  // res.render('admin')
   User.find()
   .then(user => res.render('admin', {user}))
   .catch(err => console.log(err));
-  
 });
 
 admRouter.get('/logout', (req, res) => {

@@ -6,9 +6,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: Roboto; }
-
   @media (min-width: 1401px) {
-
     html {
       font-size: 75%; } }
 
@@ -169,7 +167,6 @@ a {
         outline: none;
         margin-right: 11rem;
         font-size: 2rem; }
-
         @media (max-width: 576px) {
           .header__container-form--input {
             width: 20rem;
@@ -177,7 +174,6 @@ a {
         @media (min-width: 1401px) {
           .header__container-form--input {
             margin-right: 16rem; } }
-
         .header__container-form--input::placeholder {
           font-size: 2rem; }
           @media (max-width: 576px) {
@@ -331,7 +327,7 @@ a {
       cursor: pointer; }
   .admin__btns-container {
     margin: 11.5rem 0 0 5rem; }
-    @media (max-width: 1930px) {
+    @media (min-width: 1401px) {
       .admin__btns-container {
         margin: 13rem 0 0 5rem; } }
     .admin__btns-container--btn {
@@ -358,7 +354,7 @@ a {
   border-radius: 2rem;
   overflow-y: scroll;
   position: relative; }
-  @media (max-width: 1930px) {
+  @media (min-width: 1401px) {
     .tab-content__prospects {
       margin: 6rem auto 0 auto; } }
   .tab-content__prospects-header {
@@ -391,7 +387,7 @@ a {
     .tab-content__prospects-row--infos {
       width: 15%;
       font-size: 1.2rem; }
-      @media (max-width: 1930px) {
+      @media (min-width: 1401px) {
         .tab-content__prospects-row--infos {
           font-size: 1.6rem; } }
       .tab-content__prospects-row--infos:nth-of-type(1) {

@@ -17,11 +17,11 @@
     }
   }
 
-  @if $view == bigDesktop {
-    @media (max-width: 1930px) {
-      @content;
-    }
-  }
+  // @if $view == bigDesktop {
+  //   @media (max-width: 1930px) {
+  //     @content;
+  //   }
+  // }
 }
 
 @mixin abs-center($top: 50%, $left: 50%) {
