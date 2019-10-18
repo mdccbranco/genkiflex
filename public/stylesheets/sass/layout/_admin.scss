@@ -1,0 +1,54 @@
+.admin {
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+
+  &-container {
+    width: 120rem;
+    height: $data-container-height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__header {
+      display: flex;
+      height: $data-header-height;
+
+      &--btns {
+        padding: .5rem 1rem;
+        width: 15rem;
+        font-size: 2.6rem;
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        text-align: center;
+      }
+    }
+
+    &__infos {
+      height: $data-container-height - $data-header-height;
+      width: 100%;
+      background-color: #f0f;
+      border-radius: 10px;
+    }
+  }
+}
+
+.header-btn__active {
+  // Precisa ficar embaixo
+  border-radius: 5px;
+  background-color: #f0f;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0 - 1rem;
+    left: 0;
+    height: 1.5rem;
+    background-color: #f0f;
+    width: 15rem;
+  }
+}
