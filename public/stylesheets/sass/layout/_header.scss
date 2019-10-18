@@ -51,7 +51,7 @@
 
   &__container {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 71rem;
@@ -60,7 +60,6 @@
     border-radius: 2.6rem;
     @include abs-center(55vh);
     overflow: hidden;
-    
 
     &--catch {
       padding-top: 4.5rem;
@@ -68,23 +67,53 @@
       line-height: 175%;
       color: $color-white;
       text-align: center;
+
+      &-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     &-form {
       display: flex;
-      position: absolute;
-      top: 50%;
-      left: 10.5rem;
 
-      transform: translateX(-61.5rem);
-
+      &-block {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        left: 72rem;
+        // transform: translateX(-61.5rem);
+      }
+      
       &--input {
         width: 45rem;
-        padding: 1rem 2.5rem;
-        border-radius: .5rem;
+        padding: 3rem 2.5rem 2.5rem 2.5rem;
+        border-radius: 1rem;
         border: none;
         outline: none;
-        margin-right: 10.5rem;
+        margin-right: 11rem;
+
+        &::placeholder {
+          font-size: 2rem;
+        }
+      }
+
+      &--next {
+        @extend .header__container-btn;
+        margin: 0 11rem;
+        position: absolute;
+        top: 10rem;
+      }
+
+      &--submit {
+        @extend .header__container-btn;
+        position: absolute;
+        top: 10rem;
+        right: 22rem;
       }
     }
 

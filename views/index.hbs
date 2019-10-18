@@ -16,19 +16,27 @@
   </div>
 
   <div class="header__container">
-    <h3 class="header__container--catch">
-      Cardápios flexíveis <br> para uma alimentação com menor carne.
-    </h3>
+    <div class="header__container--catch-block">
+      <h3 class="header__container--catch">
+        Cardápios flexíveis <br> para uma alimentação com menor carne.
+      </h3>
 
-    <form action="/" method="POST" class="header__container-form hidden">
-      <input type="text" value="nome" class="header__container-form--input" placeholder="Nome:">
-      <input type="text" value="email" class="header__container-form--input" placeholder="Email:">
-      <input type="text" value="meat" class="header__container-form--input" placeholder="Come carne quantas vezes na semana?">
-      <input type="text" value="bairro" class="header__container-form--input" placeholder="Bairro:">
-      <input type="text" value="phone" class="header__container-form--input" placeholder="Telefone:">
-    </form>
+      <button class="header__container-btn">QUERO SER GENKI</button>
+    </div>
 
-    <button class="header__container-btn">QUERO SER GENKI</button>
+    <div class="header__container-form-block">
+      <form action="/" method="POST" class="header__container-form">
+        <input type="text" name="nome" class="header__container-form--input" placeholder="Nome:">
+        <input type="text" name="email" class="header__container-form--input" placeholder="Email:">
+        <input type="text" name="meat" class="header__container-form--input"
+          placeholder="Come carne quantas vezes na semana?">
+        <input type="text" name="bairro" class="header__container-form--input" placeholder="Bairro:">
+        <input type="text" name="phone" class="header__container-form--input" placeholder="Telefone:">
+        <button class="header__container-form--submit" type="submit">Finalizar</button>
+      </form>
+      <button class="header__container-form--next" type="button">Continue</button>
+    </div>
+
   </div>
 
 </header>
@@ -58,7 +66,7 @@
       </p>
       <p class="data-container__sentences--text">
         Entregas programadas para <br> você que tem uma agenda <br> apertada
-      </p> 
+      </p>
     </div>
   </div>
 </div>

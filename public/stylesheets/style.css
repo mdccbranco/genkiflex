@@ -48,7 +48,7 @@ a {
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(-120%); } }
+    transform: translateX(-72rem); } }
 
 .header {
   height: 128vh;
@@ -88,7 +88,6 @@ a {
       color: #fff; }
   .header__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 71rem;
@@ -106,20 +105,38 @@ a {
       line-height: 175%;
       color: #fff;
       text-align: center; }
+      .header__container--catch-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
     .header__container-form {
-      display: flex;
-      position: absolute;
-      top: 50%;
-      left: 10.5rem;
-      transform: translateX(-61.5rem); }
+      display: flex; }
+      .header__container-form-block {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        left: 72rem; }
       .header__container-form--input {
         width: 45rem;
-        padding: 1rem 2.5rem;
-        border-radius: .5rem;
+        padding: 3rem 2.5rem 2.5rem 2.5rem;
+        border-radius: 1rem;
         border: none;
         outline: none;
-        margin-right: 10.5rem; }
-    .header__container-btn {
+        margin-right: 11rem; }
+        .header__container-form--input::placeholder {
+          font-size: 2rem; }
+      .header__container-form--next {
+        margin: 0 11rem;
+        position: absolute;
+        top: 10rem; }
+      .header__container-form--submit {
+        position: absolute;
+        top: 10rem;
+        right: 22rem; }
+    .header__container-btn, .header__container-form--next, .header__container-form--submit {
       width: 28rem;
       padding: 3.5rem 0;
       font-size: 2.4rem;
@@ -132,10 +149,10 @@ a {
       background-color: #F27405;
       color: #fff;
       transition: all .3s; }
-      .header__container-btn:hover {
+      .header__container-btn:hover, .header__container-form--next:hover, .header__container-form--submit:hover {
         cursor: pointer;
         transform: scale(1.03) translateY(-4px); }
-      .header__container-btn:active {
+      .header__container-btn:active, .header__container-form--next:active, .header__container-form--submit:active {
         transform: scale(1.03) translateY(-2px); }
 
 .data {
@@ -231,12 +248,27 @@ a {
   display: flex;
   width: 100%;
   height: 8px; }
+  @media (max-width: 576px) {
+    .colored-line {
+      position: absolute;
+      flex-direction: column;
+      z-index: 100;
+      height: calc(128vh + 27rem);
+      width: .5rem; } }
   .colored-line--1 {
     background-color: #317302;
     width: 37.5%; }
+    @media (max-width: 576px) {
+      .colored-line--1 {
+        height: 37.5%;
+        width: .5rem; } }
   .colored-line--2 {
     background-color: #679546;
     width: 37.5%; }
+    @media (max-width: 576px) {
+      .colored-line--2 {
+        height: 37.5%;
+        width: .5rem; } }
   .colored-line--3 {
     background-color: #F2B705;
     flex-grow: 1; }

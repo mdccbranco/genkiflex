@@ -3,14 +3,32 @@
   width: $colored-line-width;
   height: $colored-line-height;
 
+  @include responsive(mobile) {
+    position: absolute;
+    flex-direction: column;
+    z-index: 100;
+    height: calc(128vh + 27rem);
+    width: .5rem;
+  }
+
   &--1 {
     background-color: $color-dark-green;
     width: 37.5%;
+
+    @include responsive(mobile) {
+      height: 37.5%;
+      width: .5rem;
+    }
   }
 
   &--2 {
     background-color: $color-light-green;
     width: 37.5%;
+
+    @include responsive(mobile) {
+      height: 37.5%;
+      width: .5rem;
+    }
   }
 
   &--3 {
