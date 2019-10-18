@@ -1,14 +1,28 @@
 <div class="admin">
   <div class="admin-container">
     <div class="admin-container__header">
-      <button class="admin-container__header--btns header-btn__active">Prospects</button>
-      <button class="admin-container__header--btns">Charts</button>
-      <button class="admin-container__header--btns">Mapa</button>
+      <button href="#tabs-1" class="admin-container__header--btns header-btn__active">Prospects</button>
+      <button href="#tabs-2" class="admin-container__header--btns">Charts</button>
+      <button href="#tabs-3" class="admin-container__header--btns">Mapa</button>
     </div>
-    <div class="admin-container__infos">
-      <div class="admin-container__infos-container">
+    {{!-- <button class='tablink' onclick="openPage('Admin', this, 'white', ' #054f77')">Informa&ccedil;&otilde;es</button> --}}
 
+
+    {{!-- <div id='Rede' class='tabcontent'></div> --}}
+    <div class="admin-container__infos">
+      
+      <div class="admin-container__infos-container" id="">
+        <br>
+        <br>
+        <br>
+        {{#each user}}
+        |                    | {{name}} | {{email}} | {{phone}} | {{meat}} | {{bairro}} 
+        <br>
+        {{/each}}
+
+        <br>
       </div>
+      
     </div>
   </div>
 </div>

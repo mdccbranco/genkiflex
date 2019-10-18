@@ -3,7 +3,7 @@ const authRoutes = express.Router();
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
-const User = require('../models/user');
+const Admin = require('../models/admin');
 // const nodemailer = require('nodemailer');
 
 authRoutes.get('/signup', (req, res, next) => {
@@ -25,7 +25,7 @@ authRoutes.post('/signup', (req, res, next) => {
     return;
   }
 
-  User.findOne({
+  Admin.findOne({
       username
     })
     .then(user => {
