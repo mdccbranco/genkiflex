@@ -1,6 +1,9 @@
 const openPage = (pageName, elmnt, bgcolor, color) => {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName('tabcontent');
+  if (pageName === 'map') {
+    googleMaps();
+  }
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = 'none';
   }
@@ -15,42 +18,41 @@ const openPage = (pageName, elmnt, bgcolor, color) => {
 // Get the element with id='defaultOpen' and click on it
 document.getElementById('defaultOpen').click();
 
-function placeOnTheMap(place) {
-  const markers = [];
-  let center = {
-    lat: 41.386230,
-    lng: 2.174980
-  };
+
+const googleMaps = () => {
+  console.log("print map")
+  const stores = [{
+    lat: -23.5742546,
+    lng: -46.677624
+  }, {
+    lat: -23.553994,
+    lng: -46.6600004
+  },{
+    lat: -23.6020718,
+    lng: -46.6742054
+  },{
+    lat: -23.5498462,
+    lng: -46.7088672
+  }];
+  var myLatlng = new google.maps.LatLng(-23.5742546, -46.677624);
+
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
-    center: center
+    center: myLatlng,
+  });
+  let markers = stores.map((location, i) => {
+    return new google.maps.Marker({
+      position: location,
+      map: map,
+      label: "GF"
+    });
   });
 
-  // let center = {
-  //   lat: 41.386230,
-  //   lng: 2.174980
-  // };
-}
+  markers.push(map);
+  console.log(markers)
 
-const getPlaces = () => {
-  axios.get("/api")
-    .then(response => {
-      placeOnTheMap(response.data);
-      console.log(response)
-    })
-    .catch(error => {
-      console.log(error);
-    })
-}
+};
 
 let ctx = document.querySelector('#canvas');
 
-// let myGraph = new Chart(ctx, {
-//   type: 'bar',
-//   data: {
-//     labels: [1,2,3,4,5,6,7];
-//     datasets: [{
-//       // label: 
-//     }]
-//   }
-// });
+

@@ -59,12 +59,24 @@
     @include abs-center(55vh);
     overflow: hidden;
 
+    @include responsive(mobile) {
+      width: 32rem;
+      height: 24rem;
+      top: 73vh;
+    }
+
     &--catch {
       padding-top: 4.5rem;
       font-size: 2.8rem;
       line-height: 175%;
       color: $color-white;
       text-align: center;
+
+      @include responsive(mobile) {
+        font-size: 2.3rem;
+        padding-top: 4rem;
+        line-height: 150%;
+      }
 
       &-block {
         width: 100%;
@@ -85,6 +97,11 @@
         top: 8rem;
         left: 72rem;
         // transform: translateX(-61.5rem);
+
+        @include responsive(mobile) {
+          left: 34rem;
+          top: 5rem;
+        }
       }
       
       &--input {
@@ -96,12 +113,44 @@
         margin-right: 11rem;
         font-size: 2rem;
 
+
+        @include responsive(mobile) {
+          width: 20rem;
+          margin-right: 5rem;
+
         &-bairro {
           width: 50rem;
+
         }
 
         &::placeholder {
           font-size: 2rem;
+
+          @include responsive(mobile) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &--select {
+        width: 50rem;
+        padding: 2.5rem 2rem;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        margin-right: 11rem;
+        background-color: #fff;
+        font-size: 2rem;
+        color: rgb(124, 124, 124);
+
+        &.option:hover {
+          background-color: #5bc0de;
+          color: #000;
+        }
+
+        @include responsive(mobile) {
+          width: 25rem;
+          margin-right: 5rem;
         }
       }
 
@@ -110,6 +159,10 @@
         margin: 0 11rem;
         position: absolute;
         top: 10rem;
+
+        @include responsive(mobile) {
+          margin: 0;
+        }
       }
 
       &--submit {
@@ -117,6 +170,10 @@
         position: absolute;
         top: 10rem;
         right: 22rem;
+
+        @include responsive(mobile) {
+          right: 5rem;
+        }
       }
     }
 
@@ -133,6 +190,13 @@
       background-color: $color-dark-orange;
       color: $color-white;
       transition: all .3s;
+
+      @include responsive(mobile) {
+        width: 25rem;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        margin-bottom: 4rem;
+      }
 
       &:hover {
         cursor: pointer;
