@@ -315,6 +315,10 @@ a {
   transform: translate(-50%, -50%);
   background-color: #fff; }
 
+#map {
+  width: 60%;
+  height: 100%; }
+
 .footer {
   height: 6rem;
   background-color: #317302;

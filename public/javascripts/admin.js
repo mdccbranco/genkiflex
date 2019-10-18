@@ -50,6 +50,7 @@ const googleMaps = () => {
   });
 
 
+  console.log(map)
   markers.push(map);
   console.log(markers)
 
