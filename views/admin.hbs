@@ -1,32 +1,68 @@
-<div class="colored-line">
-  <div class="colored-line--1"></div>
-  <div class="colored-line--2"></div>
-  <div class="colored-line--3"></div>
-  <div class="colored-line--4"></div>
-  <div class="colored-line--5"></div>
-</div>
-
-<button class='tablink' onclick="openPage('prospects', this, 'white', ' black' )" id='defaultOpen'>Prospects</button>
-<button class='tablink' onclick="openPage('chart', this, 'white', ' black')">Chart</button>
-<button class='tablink' onclick="openPage('map', this, 'white', ' black')">Map</button>
-
-
-<div id='prospects' class='tabcontent'>
-  <div class="">
-    {{#each user}}
-    {{name}} | {{email}} | {{phone}} | {{meat}} | {{bairro}}
-    {{/each}}
+<div class="admin">
+  <div class="colored-line">
+    <div class="colored-line--1"></div>
+    <div class="colored-line--2"></div>
+    <div class="colored-line--3"></div>
+    <div class="colored-line--4"></div>
+    <div class="colored-line--5"></div>
   </div>
 
+  <div class="admin__logo-box">
+    <h1 class="admin__logo-box--main">GENKI</h1>
+    <h2 class="admin__logo-box--sub">.dashboards</h3>
+  </div>
+
+  <a href="/logout" class="admin__logout">LOGOUT</a>
+
+
+  <div class="admin__btns-container">
+    <button class='admin__btns-container--btn tablink' onclick="openPage('prospects', this, 'white', ' black' )"
+      id='defaultOpen'>PROSPECTS</button>
+    <button class='admin__btns-container--btn tablink'
+      onclick="openPage('chart', this, 'white', ' black')">GRÁFICOS</button>
+    <button class='admin__btns-container--btn tablink' onclick="openPage('map', this, 'white', ' black')">MAPAS</button>
+  </div>
+
+
+  <div id='prospects' class='tabcontent'>
+    <div class="tab-content__prospects">
+      <div class="tab-content__prospects-header">
+        <h3 class="tab-content__prospects-header--title">Lead</h3>
+        <h3 class="tab-content__prospects-header--title">Nome</h3>
+        <h3 class="tab-content__prospects-header--title">E-mail</h3>
+        <h3 class="tab-content__prospects-header--title">Phone</h3>
+        <h3 class="tab-content__prospects-header--title">Bairro</h3>
+        <h3 class="tab-content__prospects-header--title">Consumo de carne desejado</h3>
+      </div>
+
+      <div class="hr-like"></div>
+
+      {{#each user}}
+      <div class="tab-content__prospects-row">
+        <div class="tab-content__prospects-row--infos">#</div>
+        <div class="tab-content__prospects-row--infos">{{name}}</div>
+        <div class="tab-content__prospects-row--infos">{{email}}</div>
+        <div class="tab-content__prospects-row--infos">{{phone}}</div>
+        <div class="tab-content__prospects-row--infos">{{meat}}</div>
+        <div class="tab-content__prospects-row--infos">{{bairro}}</div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div id='chart' class='tabcontent'>
+    <div class="tab-content__prospects">
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <div class='map' class='tabcontent' onclick="getPlaces">
+    <div id="map"> </div>
+  </div>
 </div>
-<div id='chart' class='tabcontent'>
-  la la
-</div>
-
-<div class='map' class='tabcontent' onclick="getPlaces">
-  <div id="map"> </div>
-</div>
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 <script src="javascripts/admin.js"></script>

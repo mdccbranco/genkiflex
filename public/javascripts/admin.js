@@ -1,14 +1,3 @@
-// let headerBtns = document.querySelectorAll('.admin-container__header--btns');
-
-// headerBtns.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     headerBtns.forEach(btn2 => {
-//       btn2.classList.remove('header-btn__active');
-//     });
-//     btn.classList.add('header-btn__active');
-//   });
-// })
-
 const openPage = (pageName, elmnt, bgcolor, color) => {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName('tabcontent');
@@ -17,28 +6,14 @@ const openPage = (pageName, elmnt, bgcolor, color) => {
   }
   tablinks = document.getElementsByClassName('tablink');
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = '';
-    tablinks[i].style.color = 'red';
+    tablinks[i].style.backgroundColor = '#F29F05';
   }
   document.getElementById(pageName).style.display = 'block';
-  elmnt.style.backgroundColor = bgcolor;
-  elmnt.style.color = color;
+  elmnt.style.backgroundColor = '#F27405';
 }
 
 // Get the element with id='defaultOpen' and click on it
 document.getElementById('defaultOpen').click();
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   console.log('IronGenerator JS imported successfully!');
-
-// }, false);
-
-// window.onload = () => {
-//   getPlaces();
-// };
-
 
 function placeOnTheMap(place) {
   const markers = [];
@@ -67,3 +42,15 @@ const getPlaces = () => {
       console.log(error);
     })
 }
+
+let ctx = document.querySelector('#canvas');
+
+// let myGraph = new Chart(ctx, {
+//   type: 'bar',
+//   data: {
+//     labels: [1,2,3,4,5,6,7];
+//     datasets: [{
+//       // label: 
+//     }]
+//   }
+// });
