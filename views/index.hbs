@@ -25,13 +25,21 @@
     </div>
 
     <div class="header__container-form-block">
-      <form action="/" method="POST" class="header__container-form">
-        <input type="text" name="nome" class="header__container-form--input" placeholder="Nome:">
+      <form action="/form" method="POST" class="header__container-form">
+        <input type="text" name="name" class="header__container-form--input" placeholder="Nome:">
         <input type="text" name="email" class="header__container-form--input" placeholder="Email:">
+        <input type="text" name="phone" class="header__container-form--input" placeholder="Telefone:">
+        {{!-- <input type="text" name="bairro" class="header__container-form--input" placeholder="Bairro:"> --}}
+        <select name="bairro" class="header__container-form--input" placeholder="Bairro:">
+          <option value=""></option>
+          <option value="consolacao">Consolaçãol</option>
+          <option value="jardim-paulista">Jardim Paulista</option>
+          <option value="Moema">Moema</option>
+          <option value="vila-mariana">Vila Mariana</option>
+          <option value="outros">Outros</option>
+        </select>
         <input type="text" name="meat" class="header__container-form--input"
           placeholder="Come carne quantas vezes na semana?">
-        <input type="text" name="bairro" class="header__container-form--input" placeholder="Bairro:">
-        <input type="text" name="phone" class="header__container-form--input" placeholder="Telefone:">
         <button class="header__container-form--submit" type="submit">Finalizar</button>
       </form>
       <button class="header__container-form--next" type="button">Continue</button>
