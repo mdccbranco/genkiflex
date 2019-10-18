@@ -279,4 +279,8 @@ a {
     background-color: #F27405;
     flex-grow: 1; }
 
+.map {
+  width: 100%;
+  height: 600px; }
+
 /*# sourceMappingURL=style.css.map */
