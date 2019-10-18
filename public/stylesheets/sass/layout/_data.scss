@@ -2,11 +2,20 @@
   height: $data-height;
   position: relative;
   background-color: $color-light-green;
+  @include responsive(mobile) {
+    height: 72rem;
+  }
 
   &-container {
     @include abs-center(1rem);
     width: 95%;
     height: 100%;
+    display: flex;
+    @include responsive(mobile) {
+      @include abs-center(none);
+      display: block;
+      top: 27rem;
+    }
 
     &__images {
       width: 100%;
@@ -14,11 +23,22 @@
       align-items: baseline;
       justify-content: space-between;
       margin-bottom: 3rem;
+      flex-direction: column;
 
       &-container {
-        width: 30%;
+        width: 100%;
         display: flex;
         justify-content: center;
+
+        &--img-salad{
+          padding: 3rem;
+        }
+        &--img-refrigerator{
+          padding: 0 0 4rem 0;
+        }
+        &--img-truck{
+          padding: 5rem 0 4rem 0;
+        }
       }
     }
 
@@ -33,6 +53,12 @@
         font-size: 2.2rem;
         text-align: center;
         color: $color-white;
+        @include responsive(mobile) {
+          font-size: 2rem;
+        }
+        @include responsive(bigDesktop) {
+          font-size: 2.6rem;
+        }
       }
     }
   }
